@@ -1,0 +1,106 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+  }
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.cardContainer {
+  padding: 2px 16px;
+}
+.flexContainer {
+  min-height: 50vh;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.smallFlex {
+  width: 35%;
+}
+.bigFlex {
+  width: 65%;
+}
+.respImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.animalBg {
+  background-color:#003300;
+}
+.animalText{
+  font-size: 2vw;
+  color: #d7ffd9;
+  padding: 40px 40px 40px 80px;
+}
+.baseText1{
+  font-weight: 900;
+}
+.baseText2{
+  font-weight: 300;
+}
+.baseText3{
+  font-weight: 100;
+}
+.missionBg{
+  background-color: #e8f5e9;
+}
+.missionText{
+  font-size: 2vw;
+  color: #388e3c;
+  padding: 40px 40px 40px 80px;
+}
+.aboutBg{
+  background-color: #2e7c31;
+}
+.aboutText{
+  font-size: 2vw;
+  color: #80e27e;
+  padding: 40px 40px 40px 80px;
+}
+
+
+
+
+/* MEDIA QUERIES----------------------------------
+--------------------------------------------------
+-------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .hidePhone{
+        display: none;
+    }
+    .animalText , .missionText , .aboutText {
+      padding: 20px 20px 20px 40px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and less) */
+@media only screen and (max-width: 768px) {
+    .hideTablet{
+        display: none;
+    }
+    .smallFlex , .bigFlex {
+      width: 100%;
+    }
+    .smallOrder1{
+      order: 1;
+    }
+    .smallOrder2{
+      order: 2;
+    }
+    
+}
+/* Large devices (laptops/desktops, 992px and less) */
+@media only screen and (max-width: 992px) {
+
+
+}
+    
+/* Extra large devices (large laptops and desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+}
+    

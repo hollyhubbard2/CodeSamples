@@ -1,0 +1,53 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4caf50;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #d7ffd9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #003300;
+  }
+  
+  .active {
+    background-color: #087f23;
+  }
+
+  /* MEDIA QUERIES----------------------------------
+--------------------------------------------------
+-------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+/* Medium devices (landscape tablets, 768px and less) */
+@media only screen and (max-width: 768px) {
+  li a {
+    font-size: 3vw;
+  }
+  
+}
+/* Large devices (laptops/desktops, 992px and less) */
+@media only screen and (max-width: 992px) {
+
+
+}
+  
+/* Extra large devices (large laptops and desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+}
