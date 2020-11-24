@@ -1,0 +1,13 @@
+.album {
+    align-items: center;
+    
+}
+.albumImage{
+    width: '20vw';
+    height: '20vw';
+}
+.albumText{
+    color: '#ff5bff';
+    font-size: '1vw';
+    font-weight: '100';
+}
