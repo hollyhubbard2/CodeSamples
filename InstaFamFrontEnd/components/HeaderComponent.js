@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image} from 'react-native';
-import styles from '../constants/musicmain';
+import styles from '../constants/instaStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +16,7 @@ class HeaderComponent extends Component {
           />
         </View>
         <View>
-          <FontAwesomeIcon icon={ faLocationArrow } style={styles.headerText} size={32}/>
+          <FontAwesomeIcon icon={ faLocationArrow } style={styles.headerArrow} size={'3.5vw'}/>
         </View>
       </View>
     );

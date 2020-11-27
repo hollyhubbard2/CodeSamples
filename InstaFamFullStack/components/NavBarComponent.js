@@ -2,6 +2,13 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import HomeComponent from './HomeComponent';
+import PostComponent from './PostComponent';
+import NotificationsComponent from './NotificationsComponent';
+import ProfileComponent from './ProfileComponent';
+import ExploreComponent from './ExploreComponent';
+import {PROFILE} from '../mockdata/instaProfile';
 
 
 const Tab = createBottomTabNavigator();
@@ -16,27 +23,27 @@ export default function NavBarComponent() {
   
               if (route.name === 'Home') {
                 iconName = focused
-                ? 'ios-home'
-                : 'ios-home';
+                ? 'home'
+                : 'home';
               } else if (route.name === 'Explore') {
-                iconName = focused ? 'ios-search' : 'ios-search';
+                iconName = focused ? 'magnify' : 'magnify';
               } else if (route.name === 'Post') {
-                iconName = focused ? 'ios-radio' : 'ios-radio';
+                iconName = focused ? 'camera' : 'camera';
               } else if (route.name === 'Notifications') {
-                iconName = focused ? 'ios-radio' : 'ios-radio';
+                iconName = focused ? 'heart-outline' : 'heart-outline';
               } else if (route.name === 'Profile') {
-                iconName = focused ? 'ios-radio' : 'ios-radio';
+                iconName = focused ? 'account' : 'account';
               }
               
   
               // You can return any component that you like here!
-              return <Ionicons name={iconName} size={size} color={color} />;
+              return <MaterialCommunityIcons name={iconName} color={color} size={size} />;
             },
           })}
           tabBarOptions={{
-            activeTintColor: '#ff5bff',
-            inactiveTintColor: 'black',
-            style: { backgroundColor: '#343434' }
+            activeTintColor: '#aabb97',
+            inactiveTintColor: '#29434e',
+            style: { backgroundColor: '#ffffff' }
           }}
       >
         <Tab.Screen 
@@ -58,6 +65,7 @@ export default function NavBarComponent() {
         <Tab.Screen 
             name="Profile" 
             component={ProfileComponent} 
+            initialParams={PROFILE}
         />
       </Tab.Navigator>
     </NavigationContainer>

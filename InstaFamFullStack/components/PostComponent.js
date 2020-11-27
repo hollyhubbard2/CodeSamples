@@ -5,7 +5,7 @@ const PostComponent = () => {
   return (
       <View>
             <Text>
-                Post Goes Here
+                Post Something Here
             </Text>
       </View>
     

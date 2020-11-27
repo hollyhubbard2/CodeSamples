@@ -1,53 +1,48 @@
 import React, {Component} from 'react';
-import {View, Text, Image, FlatList, SafeAreaView} from 'react-native';
+import { View, FlatList, SafeAreaView} from 'react-native';
 import styles from '../constants/instaStyles';
-import POSTS from '../mockdata/instaMock';
 
-
-const renderStory = ({ item }) => {
+const renderBaseGrid = ({ item }) => {
     return(
-        <View style={styles.rowStory}>
-            <View style={styles.rowCenter}>
+        <View style={styles.rowGrid}>
+            <View style={styles.gridCard}>
                 <Image
-                    style={styles.storyImage}
-                    source= {item.userAvatar}
+                    style={styles.gridImage}
+                    source= {item.postPhoto}
                 />
-                <Text style={styles.storyText}>{item.userHandle}</Text>
             </View>
         </View>
     );
 
 }
 
-class StoryFeedComponent extends Component{
-
+class GridComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          feedStory: POSTS
+          gridFeed: this.props.posts
         };
     }
-
     render(){
-        return(
 
+        return (
             <View>
                 <SafeAreaView style={{flex:1}}>
                     <FlatList
-                        data={this.state.feedStory}
-                        renderItem={renderStory}
+                        data={this.state.gridFeed}
+                        renderItem={renderBaseGrid}
                         keyExtractor={(item) => item.id}
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                     />
                 </SafeAreaView>
             </View>
-            
+          
         );
 
     }
+  
+};
 
 
-}
-
-export default StoryFeedComponent;
+export default GridComponent;
